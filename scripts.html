@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ants Empire Scripts – Auto Farm & Auto Sell Roblox 2025</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific styles (keeps the Ants Empire theme) */
+    .subnav {
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      margin-top:10px;
+    }
+    .subnav a {
+      padding:8px 14px;
+      background:#032b17;
+      color:#ffee00;
+      text-decoration:none;
+      border-radius:10px;
+      border:3px solid #111;
+      font-weight:700;
+      box-shadow: 3px 3px 0 #0b5c94;
+    }
+
+    .hero {
+      max-width:1100px;
+      margin: 18px auto;
+      padding:18px;
+      text-align:left;
+    }
+    .hero h1 { font-size:2rem; margin:0 0 6px; color:#071a12; }
+    .hero p { margin:6px 0; line-height:1.5; color:#071a12; }
+
+    .container {
+      max-width:1100px;
+      margin: 8px auto 40px;
+      padding: 0 12px;
+      display:grid;
+      gap:18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg,#e8ffe6 0%, #d9ffd6 100%);
+      padding:14px;
+      border-radius:12px;
+      border:4px solid #0f2431;
+      box-shadow: 6px 6px 0 rgba(0,0,0,0.25);
+    }
+
+    .feature-list {
+      list-style:none;
+      padding:0;
+      margin:8px 0 0;
+    }
+    .feature-list li {
+      padding:8px;
+      margin-bottom:8px;
+      background: rgba(255,255,255,0.85);
+      border-radius:8px;
+      font-weight:700;
+      border:3px solid rgba(3,43,23,0.06);
+    }
+
+    .script-block {
+      background:#0f2431;
+      color:#eafcff;
+      padding:12px;
+      border-radius:10px;
+      font-family: "Courier New", monospace;
+      font-size:0.92rem;
+      max-height:360px;
+      overflow:auto;
+      border:4px solid #032b17;
+      white-space:pre-wrap;
+    }
+
+    .script-actions {
+      margin-top:10px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .btn-copy, .btn-download {
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:10px;
+      background:#2ba8ff;
+      color:#fff;
+      text-decoration:none;
+      border:3px solid #0f2431;
+      box-shadow:4px 4px 0 #0b5c94;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .btn-download {
+      background:#ffcf28;
+      color:#222;
+      border:3px solid #322500;
+      box-shadow:4px 4px 0 #7f6200;
+    }
+
+    .small {
+      font-size:0.95rem;
+      color:#071a12;
+    }
+
+    /* toast */
+    #toast {
+      position: fixed;
+      left:50%;
+      transform: translateX(-50%);
+      bottom:24px;
+      background: #032b17;
+      color:#ffee00;
+      padding:10px 16px;
+      border-radius:10px;
+      border:3px solid #111;
+      display:none;
+      z-index:9999;
+      font-weight:800;
+      box-shadow:4px 4px 0 rgba(0,0,0,0.4);
+    }
+
+    @media(min-width:900px){
+      .container { grid-template-columns: 1fr 360px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐜 Ants Empire</h1>
+    <h2>Scripts Hub</h2>
+    <div class="subnav" aria-label="site links">
+      <a href="/">Home</a>
+      <a href="codes.html">Codes</a>
+      <a href="scripts.html" aria-current="page">Scripts</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Official script collection (community)</h1>
+      <p>
+        Two compact community scripts for Ants Empire are listed below. Each script can be copied to your clipboard or downloaded
+        as a `.lua` file. <strong>Always use scripts at your own risk</strong> — test in private servers and be aware of Roblox's rules.
+      </p>
+    </div>
+
+    <div class="container">
+      <!-- left: scripts -->
+      <div>
+        <!-- Script A -->
+        <div class="card" aria-label="Script 1">
+          <h3 style="margin:0 0 6px;">Script 1 — Open-source loader</h3>
+          <p class="small">This is an open-source loader that fetches the Ants Empire module from GitHub.</p>
+
+          <h4 style="margin-top:8px; margin-bottom:6px;">Script</h4>
+          <div class="script-block" id="script1">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mmr1337/ai-monster/refs/heads/main/Ants%20Empire"))() -- open source
+          </div>
+
+          <div class="script-actions">
+            <button class="btn-copy" data-target="script1">Copy Script</button>
+            <button class="btn-download" data-target="script1" data-filename="ants_empire_loader.lua">Download .lua</button>
+          </div>
+        </div>
+
+        <!-- Script B -->
+        <div style="height:16px"></div>
+        <div class="card" aria-label="Script 2">
+          <h3 style="margin:0 0 6px;">Script 2 — Full pack (community)</h3>
+          <p class="small">
+            A fuller community script that sets language and loads a remote main module. Includes a warning header.
+          </p>
+
+          <h4 style="margin-top:8px; margin-bottom:6px;">Script</h4>
+          <div class="script-block" id="script2">
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+_G.language = "TH"
+loadstring(game:HttpGet"https://raw.githubusercontent.com/sayurihub/rbx/refs/heads/main/!Main?nocache=")()
+          </div>
+
+          <div class="script-actions">
+            <button class="btn-copy" data-target="script2">Copy Script</button>
+            <button class="btn-download" data-target="script2" data-filename="ants_empire_fullpack.lua">Download .lua</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- right: details / warnings -->
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0;">Quick description</h3>
+          <p class="small">
+            These scripts automate or load community tools to help with farming, harvesting, selling and buying eggs in Ants Empire.
+            They are intended for experienced users — do not run unknown code without understanding it first.
+          </p>
+
+          <h4 style="margin-top:12px;">Primary features (what to expect)</h4>
+          <ul class="feature-list" aria-hidden="false">
+            <li>Auto Farm / Auto Harvest (via loaded modules)</li>
+            <li>Auto Sell / Silent Sell</li>
+            <li>Auto Buy Eggs & Items</li>
+            <li>Slot automation & supportive tools (module dependent)</li>
+          </ul>
+
+          <h4 style="margin-top:12px;">How to use</h4>
+          <ol class="small">
+            <li>Prefer a private server for testing.</li>
+            <li>Copy or download the script above.</li>
+            <li>Paste into your executor and run while in-game.</li>
+            <li>Enable features from the script UI (if present).</li>
+          </ol>
+
+          <h4 style="margin-top:12px;">Important warnings</h4>
+          <p class="small" style="color:#8a1a1a; font-weight:800;">
+            ⚠️ Use at your own risk. Running scripts may violate Roblox Terms of Service. We strongly recommend private testing
+            and reviewing the loaded remote code before use.
+          </p>
+
+          <h4 style="margin-top:12px;">Community</h4>
+          <p class="small">
+            Join the game/creator Discord for official updates and safer releases. Community modules change frequently — keep an eye
+            on source URLs and changelogs.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Ants Empire Community — scripts shared by the community. Not affiliated with Roblox.</p>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite">Copied!</div>
+
+  <script>
+    // Copy and Download logic (works offline, generates .lua download)
+    (function(){
+      const toast = document.getElementById('toast');
+
+      function showToast(msg='Copied!') {
+        toast.textContent = msg;
+        toast.style.display = 'block';
+        toast.style.opacity = '1';
+        clearTimeout(window._toastTimer);
+        window._toastTimer = setTimeout(()=>{
+          toast.style.opacity = '0';
+          setTimeout(()=> toast.style.display = 'none', 300);
+        }, 1600);
+      }
+
+      // copy handler
+      document.querySelectorAll('.btn-copy').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const targetId = btn.getAttribute('data-target');
+          const el = document.getElementById(targetId);
+          if(!el) return;
+          const text = el.textContent || el.innerText || '';
+          if(navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(()=>{
+              showToast('Script copied to clipboard');
+              const old = btn.textContent;
+              btn.textContent = 'Copied!';
+              setTimeout(()=> btn.textContent = old, 1200);
+            }).catch(()=> fallbackCopy(text));
+          } else {
+            fallbackCopy(text);
+          }
+
+          function fallbackCopy(txt){
+            const ta = document.createElement('textarea');
+            ta.value = txt;
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+              document.execCommand('copy');
+              showToast('Script copied to clipboard');
+            } catch(e) {
+              showToast('Copy failed — select manually');
+            }
+            document.body.removeChild(ta);
+          }
+        });
+      });
+
+      // download handler
+      document.querySelectorAll('.btn-download').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const targetId = btn.getAttribute('data-target');
+          const filename = btn.getAttribute('data-filename') || 'script.lua';
+          const el = document.getElementById(targetId);
+          if(!el) return;
+          const text = el.textContent || el.innerText || '';
+          const blob = new Blob([text], {type: 'text/plain;charset=utf-8'});
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(()=>{
+            URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+          }, 250);
+          showToast('Download started: ' + filename);
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>

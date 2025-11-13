@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ants Empire Codes (Active) - November 2025</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific tweaks that keep the same theme */
+    .subnav {
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      margin-top:10px;
+    }
+    .subnav a {
+      padding:8px 14px;
+      background:#032b17;
+      color:#ffee00;
+      text-decoration:none;
+      border-radius:10px;
+      border:3px solid #111;
+      font-weight:700;
+      box-shadow: 3px 3px 0 #0b5c94;
+    }
+    .hero {
+      max-width:1100px;
+      margin: 18px auto;
+      padding:18px;
+      text-align:left;
+    }
+    .hero h1 { font-size:2rem; margin:0 0 6px; color:#071a12; }
+    .hero p { margin:6px 0; line-height:1.5; color:#071a12; }
+    .section-title {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin: 18px auto 8px;
+      max-width:1100px;
+      padding:0 12px;
+    }
+    .section-title h2 {
+      margin:0;
+      color:#032b17;
+      text-shadow: 2px 2px 0 #000;
+      font-size:1.4rem;
+    }
+    .cards {
+      display:grid;
+      gap:14px;
+      grid-template-columns: repeat(1, 1fr);
+      max-width:1100px;
+      margin: 8px auto 24px;
+      padding:0 12px;
+    }
+    @media(min-width:700px){
+      .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media(min-width:1000px){
+      .cards { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Card */
+    .code-card {
+      background: linear-gradient(180deg,#e8ffe6 0%, #d9ffd6 100%);
+      padding:14px;
+      border-radius:12px;
+      border:4px solid #0f2431;
+      box-shadow: 6px 6px 0 rgba(0,0,0,0.25);
+      position:relative;
+    }
+    .code-card .tag {
+      position:absolute;
+      top:10px;
+      right:10px;
+      padding:6px 8px;
+      border-radius:8px;
+      font-weight:800;
+      font-size:0.85rem;
+      color:#111;
+      background:#ffee00;
+      border:3px solid #111;
+      text-shadow:1px 1px 0 #000;
+    }
+    .code-value {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:10px;
+    }
+    .code-badge {
+      font-family: "Courier New", monospace;
+      font-size:1.15rem;
+      padding:10px 12px;
+      border-radius:8px;
+      background:#fff;
+      border:3px solid #032b17;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+      letter-spacing:1px;
+      font-weight:900;
+      color:#032b17;
+    }
+    .reward {
+      margin-top:10px;
+      font-weight:700;
+      color:#0f2431;
+      text-shadow:1px 1px 0 #cbe6a9;
+    }
+    .card-actions {
+      display:flex;
+      gap:8px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+    .btn-copy {
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:10px;
+      background:#2ba8ff;
+      color:#fff;
+      text-decoration:none;
+      border:3px solid #0f2431;
+      box-shadow:4px 4px 0 #0b5c94;
+      font-weight:800;
+      cursor:pointer;
+    }
+    .btn-visit {
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:10px;
+      background:#ffcf28;
+      color:#222;
+      text-decoration:none;
+      border:3px solid #322500;
+      box-shadow:4px 4px 0 #7f6200;
+      font-weight:800;
+    }
+
+    /* Expired style */
+    .expired-list {
+      max-width:1100px;
+      margin:8px auto 60px;
+      padding:0 12px;
+    }
+    .expired-item {
+      background:#f0f0f0;
+      border-radius:10px;
+      padding:10px;
+      margin-bottom:10px;
+      border:3px dashed #b3b3b3;
+      color:#444;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    /* Copy toast */
+    #toast {
+      position: fixed;
+      left:50%;
+      transform: translateX(-50%);
+      bottom:24px;
+      background: #032b17;
+      color:#ffee00;
+      padding:10px 16px;
+      border-radius:10px;
+      border:3px solid #111;
+      display:none;
+      z-index:9999;
+      font-weight:800;
+      box-shadow:4px 4px 0 rgba(0,0,0,0.4);
+    }
+
+    /* FAQ and extra content */
+    .content-block {
+      max-width:1100px;
+      margin: 8px auto 40px;
+      padding:12px;
+      text-align:left;
+      color:#071a12;
+    }
+
+    .hint {
+      display:inline-block;
+      background:#fff7b2;
+      padding:6px 10px;
+      border-radius:8px;
+      border:3px solid #7f6200;
+      font-weight:800;
+      color:#443100;
+      margin-top:6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🐜 Ants Empire</h1>
+    <h2>Codes & Scripts Hub</h2>
+    <div class="subnav" aria-label="site links">
+      <a href="/">Home</a>
+      <a href="codes.html" aria-current="page">Codes</a>
+      <a href="scripts.html">Scripts</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>All Active Ants Empire Codes (Redeem now)</h1>
+      <p>
+        Welcome to the central Ants Empire code vault — this page contains the latest active promo codes, their rewards,
+        instructions for redeeming, and everything you need to get free Fruit, Starfruit, Gold Leaf and more.
+      </p>
+      <p class="hint">Tip: Click the <strong>Copy</strong> button on a code card to copy the code instantly and paste it into the game.</p>
+    </div>
+
+    <!-- Active codes -->
+    <div class="section-title">
+      <h2>Working Codes</h2>
+      <div style="font-size:0.95rem; color:#071a12">Updated: <strong>Today</strong></div>
+    </div>
+
+    <div class="cards" aria-live="polite">
+      <!-- Card 1 -->
+      <article class="code-card" aria-label="Code supersecret">
+        <div class="tag">Active</div>
+        <div>
+          <strong>supersecret</strong>
+          <div class="reward">Reward: 10 × Gold Leaf</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">SUPERSECRET</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="supersecret" aria-label="Copy supersecret">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="code-card" aria-label="Code herefishyfish">
+        <div class="tag">Active</div>
+        <div>
+          <strong>herefishyfish</strong>
+          <div class="reward">Reward: 2,000 Fruit + 5 × Starfruit</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">HEREFISHYFISH</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="herefishyfish" aria-label="Copy herefishyfish">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="code-card" aria-label="Code bedbugs">
+        <div class="tag">Active</div>
+        <div>
+          <strong>bedbugs</strong>
+          <div class="reward">Reward: 10 × Gold Leaf</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">BEDBUGS</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="bedbugs" aria-label="Copy bedbugs">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="code-card" aria-label="Code flame">
+        <div class="tag">Active</div>
+        <div>
+          <strong>flame</strong>
+          <div class="reward">Reward: 10 × Gold Leaf</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">FLAME</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="flame" aria-label="Copy flame">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="code-card" aria-label="Code 989">
+        <div class="tag">Active</div>
+        <div>
+          <strong>989</strong>
+          <div class="reward">Reward: 20 × Gold Leaf + 50 Leaf</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">989</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="989" aria-label="Copy 989">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="code-card" aria-label="Code ilikefood">
+        <div class="tag">Active</div>
+        <div>
+          <strong>ilikefood</strong>
+          <div class="reward">Reward: 1,000 Fruit</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">ILIKEFOOD</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="ilikefood" aria-label="Copy ilikefood">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="code-card" aria-label="Code BONUS">
+        <div class="tag">Active</div>
+        <div>
+          <strong>BONUS</strong>
+          <div class="reward">Reward: 10 × Starfruit</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">BONUS</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="BONUS" aria-label="Copy BONUS">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="code-card" aria-label="Code pheromones">
+        <div class="tag">Active</div>
+        <div>
+          <strong>pheromones</strong>
+          <div class="reward">Reward: 2,500 Fruit</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">PHEROMONES</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="pheromones" aria-label="Copy pheromones">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 9 -->
+      <article class="code-card" aria-label="Code colony">
+        <div class="tag">Active</div>
+        <div>
+          <strong>colony</strong>
+          <div class="reward">Reward: 1,500 Fruit</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">COLONY</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="colony" aria-label="Copy colony">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 10 -->
+      <article class="code-card" aria-label="Code sugar">
+        <div class="tag">Active</div>
+        <div>
+          <strong>sugar</strong>
+          <div class="reward">Reward: 10 × Sugar</div>
+        </div>
+
+        <div class="code-value">
+          <div class="code-badge">SUGAR</div>
+          <div class="card-actions">
+            <button class="btn-copy" data-code="sugar" aria-label="Copy sugar">Copy</button>
+            <a class="btn-visit" href="#" onclick="alert('Open the game and paste the code in the Enter Code box');return false;">How to Redeem</a>
+          </div>
+        </div>
+      </article>
+
+    </div> <!-- end cards -->
+
+    <!-- Expired codes -->
+    <div class="section-title">
+      <h2>Expired / Previous Codes</h2>
+      <div style="font-size:0.95rem; color:#071a12">These codes have been moved here for reference</div>
+    </div>
+
+    <div class="expired-list" aria-live="polite">
+      <div class="expired-item">
+        <div><strong>BOOST</strong> — previously gave in-game rewards</div>
+        <div style="opacity:0.7">Expired</div>
+      </div>
+
+      <div class="expired-item">
+        <div><strong>OLDPROMO</strong> — older promo (no longer redeemable)</div>
+        <div style="opacity:0.7">Expired</div>
+      </div>
+
+      <div class="expired-item">
+        <div><strong>SUMMER2024</strong> — seasonal code</div>
+        <div style="opacity:0.7">Expired</div>
+      </div>
+
+      <p style="font-size:0.95rem; color:#071a12; margin-top:8px;">
+        If you notice a code has actually returned or was mistakenly marked expired, let us know via the comments (or open an issue on the GitHub repo).
+      </p>
+    </div>
+
+    <!-- How to redeem + FAQ -->
+    <section class="content-block">
+      <h3>How to Redeem Ants Empire Codes</h3>
+      <ol>
+        <li>Open Ants Empire on Roblox.</li>
+        <li>Click the <strong>gear / settings</strong> icon in the game (usually on the left toolbar).</li>
+        <li>Find the <strong>Enter Code</strong> box, paste a code (use the <em>Copy</em> button above), and press the green arrow to claim your reward.</li>
+      </ol>
+
+      <h3>Why codes stop working</h3>
+      <p>
+        Codes are frequently limited-time. They may expire after events, be single-use per account, or be replaced with new promotions.
+        Always type (or paste) codes exactly as shown. Codes are case-insensitive in most Roblox games, but spacing must be exact.
+      </p>
+
+      <h3>How to get more codes</h3>
+      <p>
+        The fastest ways to find new codes:
+      </p>
+      <ul>
+        <li>Follow the game developer on Roblox and join the official Discord.</li>
+        <li>Check developer social posts or update notices for event codes.</li>
+        <li>Bookmark this page and check back — we update the list when new codes are released.</li>
+      </ul>
+
+      <h3>Ants Empire — Quick FAQ</h3>
+      <dl>
+        <dt>What is Ants Empire?</dt>
+        <dd>Ants Empire is a Roblox simulator where you grow an ant colony, gather resources, hatch larvae, and battle other creatures.</dd>
+
+        <dt>How do I get Stingers?</dt>
+        <dd>Stingers are commonly found as quest or boss rewards. Defeating stronger enemies like scorpions or spiders increases your chance to collect them.</dd>
+
+        <dt>Is there a wiki or guide?</dt>
+        <dd>There is no official wiki at the time of writing — community guides and Discord channels are the best current resources.</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Ants Empire Community — content curated for players. Not affiliated with Roblox.</p>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite">Copied!</div>
+
+  <script>
+    // Copy to clipboard logic with toast feedback
+    (function(){
+      const toast = document.getElementById('toast');
+
+      function showToast(msg='Copied!') {
+        toast.textContent = msg;
+        toast.style.display = 'block';
+        toast.style.opacity = '1';
+        clearTimeout(window._toastTimer);
+        window._toastTimer = setTimeout(()=>{
+          toast.style.opacity = '0';
+          setTimeout(()=> toast.style.display = 'none', 300);
+        }, 1600);
+      }
+
+      document.querySelectorAll('.btn-copy').forEach(btn=>{
+        btn.addEventListener('click', async (e)=>{
+          const code = btn.getAttribute('data-code') || '';
+          if(!code) return;
+          try {
+            await navigator.clipboard.writeText(code);
+            showToast('Code copied: ' + code.toUpperCase());
+            // Small visual feedback on the button
+            const old = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(()=> btn.textContent = old, 1200);
+          } catch(err) {
+            // fallback
+            const ta = document.createElement('textarea');
+            ta.value = code;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); showToast('Code copied: ' + code.toUpperCase()); }
+            catch(e){ showToast('Copy failed — select manually'); }
+            document.body.removeChild(ta);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
